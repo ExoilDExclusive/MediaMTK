@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Pembelajaran Matematika Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ================ HEADER & NAVBAR ================ -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Edu<span>Circlelan</span></div>
+      <ul class="nav-links">
+        <li><a href="#unsur">Unsur Lingkaran</a></li>
+        <li><a href="#persamaan">Persamaan Lingkaran</a></li>
+        <li><a href="#kedudukan">Kedudukan Titik</a></li>
+      </ul>
+    </nav>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Belajar <span>Buleudan</span> dengan Interaktif bersama Prof.Dr.H.Harysma Dwi Subagja S.M.K 😎</h1>
+        <p>
+          Pelajari unsur-unsur lingkaran, persamaan lingkaran, dan kedudukan titik
+          terhadap lingkaran lengkap dengan rumus, contoh soal, dan kalkulator interaktif.
+        </p>
+        <a href="p/quizz" class="btn-primary">Quizz?</a>
+      </div>
+      
+      <div class="hero-visual">
+        <!-- Ilustrasi futuristik lingkaran (dibuat sendiri) -->
+        <div class="circle-orbit">
+          <div class="circle-core"></div>
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <!-- ================ 1. UNSUR LINGKARAN ================ -->
+    <section id="unsur" class="section">
+      <div class="section-header">
+        <h2>1. Unsur-Unsur Lingkaran</h2>
+        <p>
+          Sebelum membahas persamaan dan kedudukan titik, pahami dulu bagian-bagian penting dari sebuah lingkaran.
+        </p>
+      </div>
+      
+      <div class="grid-2">
+        <article class="card">
+          <h3>Penjelasan Unsur Lingkaran</h3>
+          <ul class="list">
+            <li><strong>Pusat (O)</strong>: titik yang jaraknya sama ke semua titik pada lingkaran.</li>
+            <li><strong>Jari-jari (r)</strong>: jarak dari pusat ke titik pada lingkaran.</li>
+            <li><strong>Diameter (d)</strong>: ruas garis yang melalui pusat dan menghubungkan dua titik pada lingkaran (d = 2r).</li>
+            <li><strong>Tali busur</strong>: ruas garis yang menghubungkan dua titik pada lingkaran.</li>
+            <li><strong>Busur</strong>: lengkungan pada keliling lingkaran.</li>
+            <li><strong>Juring</strong>: daerah yang dibatasi oleh dua jari-jari dan satu busur.</li>
+            <li><strong>Tembereng</strong>: daerah yang dibatasi oleh tali busur dan busur.</li>
+            <li><strong>Garis singgung</strong>: garis yang menyinggung lingkaran di satu titik.</li>
+            <li><strong>Garis secan</strong>: garis yang memotong lingkaran di dua titik.</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <h3>Ilustrasi Unsur Lingkaran</h3>
+          
+          <!-- Gambar dari internet bebas hak cipta -->
+          <!-- Ganti src di bawah dengan link gambar dari Google Images
+               yang berlisensi Creative Commons / bebas hak cipta
+               (misalnya dari Wikimedia Commons / Pixabay). -->
+          <figure class="figure">
+            <img src="unsur-lingkaran.png" alt="Ilustrasi unsur-unsur lingkaran" />
+            <figcaption>
+              Contoh ilustrasi unsur-unsur lingkaran
+              (pusat, jari-jari, diameter, tali busur, dsb).
+            </figcaption>
+          </figure>
+          
+          <!-- SVG sendiri (tidak kena copyright) -->
+          <div class="svg-wrapper">
+            <svg viewBox="0 0 260 260">
+              <circle cx="130" cy="130" r="90" class="svg-circle" />
+              <circle cx="130" cy="130" r="4" class="svg-center" />
+              <line x1="130" y1="130" x2="220" y2="130" class="svg-radius" />
+              <line x1="40" y1="130" x2="220" y2="130" class="svg-diameter" />
+              <line x1="70" y1="70" x2="210" y2="110" class="svg-chord" />
+              <text x="135" y="125" class="svg-label">O</text>
+              <text x="172" y="120" class="svg-label-small">r</text>
+              <text x="120" y="118" class="svg-label-small">d</text>
+              <text x="150" y="80" class="svg-label-small">tali busur</text>
+            </svg>
+          </div>
+        </article>
+      </div>
+      
+      <article class="card">
+        <h3>Contoh Soal Unsur Lingkaran</h3>
+        <ol class="list">
+          <li>
+            Sebuah lingkaran memiliki jari-jari 7 cm.
+            <br />a. Tentukan diameter lingkaran.
+            <br />b. Tentukan keliling lingkaran. (Gunakan π = 22/7)
+          </li>
+        </ol>
+        <details class="details">
+          <summary>Pembahasan</summary>
+          <p>a. Diameter: d = 2r = 2 × 7 = 14 cm</p>
+          <p>
+            b. Keliling: K = 2πr = 2 × 22/7 × 7 = 44 cm
+          </p>
+        </details>
+      </article>
+    </section>
+    
+    <!-- ================ 2. PERSAMAAN LINGKARAN ================ -->
+    <section id="persamaan" class="section">
+      <div class="section-header">
+        <h2>2. Persamaan Lingkaran</h2>
+        <p>
+          Di bidang koordinat, lingkaran dapat dituliskan dalam bentuk baku dan bentuk umum.
+        </p>
+      </div>
+      
+      <div class="grid-2">
+        <article class="card">
+          <h3>Bentuk Baku</h3>
+          <p>
+            Lingkaran berpusat di (a, b) dengan jari-jari r
+            memiliki persamaan:
+          </p>
+          <p class="formula">
+            (x − a)² + (y − b)² = r²
+          </p>
+          <p>
+            Jika pusat di (0, 0), maka:
+          </p>
+          <p class="formula">
+            x² + y² = r²
+          </p>
+          
+          <h4>Contoh</h4>
+          <p>
+            Tentukan persamaan lingkaran dengan pusat (2, −1) dan jari-jari 5.
+          </p>
+          <details class="details">
+            <summary>Pembahasan</summary>
+            <p>Diketahui a = 2, b = −1, r = 5.</p>
+            <p class="formula">
+              (x − 2)² + (y + 1)² = 5² = 25
+            </p>
+          </details>
+        </article>
+        
+        <article class="card">
+          <h3>Bentuk Umum</h3>
+          <p>
+            Persamaan lingkaran juga bisa ditulis sebagai:
+          </p>
+          <p class="formula">
+            x² + y² + Ax + By + C = 0
+          </p>
+          <p>
+            Pusat dan jari-jari dapat dicari dengan:
+          </p>
+          <p class="formula">
+            Pusat = (−A/2, −B/2)
+            <br />
+            r = √((A/2)² + (B/2)² − C)
+          </p>
+          
+          <h4>Contoh</h4>
+          <p>
+            Tentukan pusat dan jari-jari dari:
+            <br />
+            x² + y² − 4x + 6y − 3 = 0
+          </p>
+          <details class="details">
+            <summary>Pembahasan</summary>
+            <p>
+              Kelompokkan:
+              <br />
+              (x² − 4x) + (y² + 6y) = 3
+            </p>
+            <p>
+              Lengkapi kuadrat:
+              <br />
+              x² − 4x + 4 = (x − 2)²
+              <br />
+              y² + 6y + 9 = (y + 3)²
+            </p>
+            <p>
+              Tambah 4 dan 9 ke kanan:
+              <br />
+              (x − 2)² + (y + 3)² = 3 + 4 + 9 = 16
+            </p>
+            <p>
+              Jadi pusat (2, −3) dan jari-jari r = 4.
+            </p>
+          </details>
+        </article>
+      </div>
+    </section>
+    
+    <!-- ================ 3. KEDUDUKAN TITIK ================ -->
+    <section id="kedudukan" class="section">
+      <div class="section-header">
+        <h2>3. Kedudukan Titik terhadap Lingkaran</h2>
+        <p>
+          Untuk menentukan apakah sebuah titik berada di dalam, pada, atau di luar lingkaran,
+          bandingkan jarak titik ke pusat dengan jari-jari lingkaran.
+        </p>
+      </div>
+      
+      <div class="grid-2">
+        <!-- Teori & Contoh -->
+        <article class="card">
+          <h3>Konsep Dasar</h3>
+          <p>
+            Lingkaran berpusat di (a, b) dengan jari-jari r.
+            Titik P(x₁, y₁).
+          </p>
+          <p>
+            Hitung:
+          </p>
+          <p class="formula">
+            d² = (x₁ − a)² + (y₁ − b)²
+          </p>
+          <ul class="list">
+            <li>Jika d² &lt; r² → titik di <strong>dalam</strong> lingkaran.</li>
+            <li>Jika d² = r² → titik <strong>pada</strong> lingkaran.</li>
+            <li>Jika d² &gt; r² → titik di <strong>luar</strong> lingkaran.</li>
+          </ul>
+          
+          <h4>Contoh</h4>
+          <p>
+            Lingkaran: x² + y² = 25 (pusat (0, 0), r = 5).
+          </p>
+          <ol class="list">
+            <li>P(3, 4) → d² = 3² + 4² = 25 → pada lingkaran.</li>
+            <li>Q(1, 1) → d² = 1² + 1² = 2 → di dalam lingkaran.</li>
+            <li>R(6, 0) → d² = 6² + 0² = 36 → di luar lingkaran.</li>
+          </ol>
+        </article>
+        
+        <!-- Kalkulator -->
+        <article class="card">
+          <h3>Kalkulator Kedudukan Titik</h3>
+          <p>
+            Masukkan pusat lingkaran, jari-jari, dan koordinat titik.
+            Hasil akan menunjukkan apakah titik berada di dalam, pada, atau di luar,
+            beserta langkah perhitungannya.
+          </p>
+          
+          <form id="pointChecker" class="form">
+            <div class="form-group">
+              <label for="centerX">Pusat (a):</label>
+              <input type="number" id="centerX" step="any" value="0" />
+            </div>
+            <div class="form-group">
+              <label for="centerY">Pusat (b):</label>
+              <input type="number" id="centerY" step="any" value="0" />
+            </div>
+            <div class="form-group">
+              <label for="radius">Jari-jari (r):</label>
+              <input type="number" id="radius" step="any" value="5" />
+            </div>
+            <div class="form-group">
+              <label for="pointX">Titik P (x₁):</label>
+              <input type="number" id="pointX" step="any" value="3" />
+            </div>
+            <div class="form-group">
+              <label for="pointY">Titik P (y₁):</label>
+              <input type="number" id="pointY" step="any" value="4" />
+            </div>
+            <button type="submit" class="btn-primary">Cek Kedudukan</button>
+          </form>
+          
+          <div id="resultBox" class="result-box">
+            Hasil dari template AI jir 🤣 Pokonamah 80% bener 🥰 salah? jitak si Harys 🤡
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p>© 2025 Media Pembelajaran Lingkaran • Matematika SMA/SMK.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
