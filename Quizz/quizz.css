@@ -1,0 +1,309 @@
+:root {
+  --bg-main: #020617;
+  --bg-card: #0b1220;
+  --accent: #38bdf8;
+  --accent2: #a855f7;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-soft: rgba(148, 163, 184, 0.4);
+  --radius-xl: 1.2rem;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+  --transition-fast: 0.2s ease-out;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  background:
+    radial-gradient(circle at top, #0f172a, #020617 50%, #000000 100%);
+  color: var(--text-main);
+}
+
+/* PAGE LAYOUT */
+
+.page-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+/* HEADER */
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.quiz-header h1 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.quiz-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+/* BACK BUTTON */
+
+.btn-back {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: var(--text-muted);
+  background: rgba(15, 23, 42, 0.9);
+  transition: var(--transition-fast);
+}
+
+.btn-back:hover {
+  color: #f9fafb;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.3);
+}
+
+/* MAIN CONTENT */
+
+.quiz-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+/* CARDS / SECTION */
+
+.quiz-section {
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.2), transparent 60%),
+    var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  padding: 1.2rem 1.4rem;
+}
+
+.quiz-section h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+}
+
+/* QUESTIONS */
+
+.quiz-question {
+  margin-top: 0.8rem;
+}
+
+.quiz-question p {
+  margin: 0 0 0.3rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.quiz-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.quiz-options label:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.35);
+}
+
+.quiz-options input[type="radio"] {
+  accent-color: var(--accent);
+}
+
+/* ESSAY */
+
+.bonus-section {
+  border-style: dashed;
+}
+
+.essay-input {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--text-main);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.essay-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.5);
+}
+
+.details {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  font-size: 0.9rem;
+}
+
+.details summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* BUTTON PRIMARY */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.4), rgba(15, 23, 42, 0.98));
+  color: #f9fafb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(59, 130, 246, 0.5);
+}
+
+/* RESULT BOX */
+
+.quiz-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+
+.result-box {
+  margin-top: 0.5rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(56, 189, 248, 0.7);
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.95));
+  font-size: 0.95rem;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  z-index: 50;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.3), transparent 55%),
+    #020617;
+  border-radius: 1.3rem;
+  padding: 1.3rem 1.4rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 1);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
+  border: none;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 200px;
+  max-width: 70%;
+  border-radius: 1rem;
+  margin: 0.4rem auto 0.5rem;
+  display: block;
+}
+
+.modal-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 640px) {
+  .quiz-header {
+    padding-top: 1.6rem;
+  }
+
+  .btn-back {
+    position: static;
+    display: inline-flex;
+    margin-bottom: 0.5rem;
+  }
+}
